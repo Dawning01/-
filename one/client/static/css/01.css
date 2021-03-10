@@ -1,0 +1,194 @@
+h1,h2,h3,p,body,ul,li{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none; 
+}
+img{
+    display: block;
+}
+body{
+    font: 16px 'Courier New';
+    
+}
+#ab{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:200;
+    height:100%;
+    width:100%;
+    background: #000000;
+    filter:alpha(opacity=30);
+    -moz-opacity:0.3;  
+    opacity:0.3; 
+    display:none;
+}
+#start{
+   postion:relative
+   border: 2px solid red;
+   width:440px ;
+   height:410px ;
+   margin:0 auto; 
+   margin-top: 100px;
+   margin-left: 38%;
+   border-radius: 10px;
+   position: absolute;
+   background:#ffffff;
+   z-index:201;
+   /* display: none; */
+   
+}
+.start{
+
+    padding: 40px;
+    color: #333;
+}
+.login{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+.gb{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    margin-left: 367px;
+    margin-top: -80px;
+}
+li{
+    margin-top: 20px;
+    
+  }
+.username,.password{
+    width:332px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+.uid{
+    position:absolute;
+    top:105px;
+    left:65px;
+    background-image: url(../images/uidBg.png);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+.pwd{
+    position:absolute;
+    top:170px;
+    left:65px;
+    background-image: url(../images/pwdBg.png);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+input{
+    border:none;
+}
+.code{
+    position:absolute;
+    margin-left: 225px;
+}
+.main{
+    margin-left: 10px;
+    margin-top: 20px;
+    color: red;
+    font-weight:bold;
+}
+
+#password{
+    margin-left: 170px;
+    color: red;
+}
+#password:hover{
+    color: blue;
+}
+.button{
+    width:332px;
+    height: 40px;
+    margin:0 auto;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 20px;
+    font-weight:bold;
+    background-color: red;
+    margin-top: 20px;
+
+}
+.there{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    left: 140px;
+    top: 385px;
+
+}
+.two{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    left: 210px;
+    top: 385px
+}
+.ten{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    left: 280px;
+    top: 385px
+}
+.six{
+    position: absolute;
+    top:385px;
+    left: 370px;
+    color: red;
+}
+.six:hover{
+    color: black;
+}
+
+ console.log(1111111111);
+                success:function(res){
+                if(a<3){
+                if(res.code==200){
+                      alert('登录成功！');
+                      window.localStorage.setItem('mm_token',res.data.token);
+                      window.localStorage.setItem('mm_user',res.username);
+                    }else{
+                        a+=1;
+                        alert(res.error;
+                    }
+                }
+                else{
+                     $('.abc').css("display":"");
+                     if(code!=codes){
+                        alert('验证码错误')
+                    }else{
+                    success:function(res){
+                    if(res.code==200){
+                      alert('登录成功！');
+                      window.localStorage.setItem('mm_token',res.data.token);
+                      window.localStorage.setItem('mm_user',res.username);
+                    }else{
+                        a+=1;
+                        alert(res.error);
+
+                    }
+                    }
+                }
+
+             }

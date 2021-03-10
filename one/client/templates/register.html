@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../static/css/02.css">
+    <script src="../static/js/jquery.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <h1 class="logn">
+                <a href='#'>我爱学习</a>
+            </h1>
+            <p>成功路上 有你我相伴</p>
+            <div>
+                <a href="#">
+                    <i>获取帮助</i>
+                </a>
+                <div class="one">
+                     <a href="#" class="two">?</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <img  class="img" src="../static/images/857.jpg" alt="">
+        </div>
+        <div class="there">
+            <div class="ten">
+                <div><img class="login" src="../static/images/image.png"></div>
+                <ul>
+                    <li><div><input type="text" class="username int" placeholder="请输入用户名"></div></li>
+                    <li><div><input type="password" class="password int" placeholder="请输入密码"></div></li>
+                    <li><div><input type="password" class="password_1 int" placeholder="确认密码"></div></li>
+                    <li><div><input type="text" class="postbox int" placeholder="请输入邮箱"></div></li>
+                    <li><div><input type="text" class="tem int" placeholder="请输入手机号" maxlength="11">
+                        <input type="button" id="sms" onclick="sendSMS();settime(this)" value="免费获取验证码" >
+                    </div> </li>
+                    <li><div><input type="text" class="sum int" placeholder="请输入验证码"></div></li>
+                    <li><select name="" id="question">
+                        <option value="" class="question">请选择密保问题</option>
+                      </select></li>
+                    <li><div><input type="text" class="key int" placeholder="请输入答案" ></div></li>
+                </ul>
+                <div><input type="checkbox" class="checkbox">我已认真阅读并同意<a href="#">《版权声明》
+                </a></div>
+                <div><input type="submit" class="submit" value="注册并登录" onclick="register()"></div>
+            </div>  
+        </div>
+
+    </main>
+    <footer>
+        <div class="last">
+            <div class="end">
+                <a href="#">关于我们</a>
+                <span>|</span>
+                <a href="#">联系我们</a>
+                <span>|</span>
+                <a href="#">招聘人才</a>
+                <span>|</span>
+                <a href="#">友情链接</a>
+                <span>|</span>
+                <a href="#">老师入驻</a>
+                <span>|</span>
+                <a href="#">广告服务</a>
+                <div>我爱学习小组全体成员@武汉市武昌区达内中心</div>
+                <div> 联系电话：183#######&nbsp;&nbsp;&nbsp;邮箱:#####@qq.com</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="../static/js/index.js"></script>
+<script>
+    function register(){
+        alert(11111)
+        var username = $('.username').val();
+        var password = $('.password').val();
+        var password_1 = $('.password_1').val();
+        var postbox = $('.postbox').val();
+        var tem = $('.tem').val();
+        var key = $('.key').val();
+        var question=$("#question option:selected").text()
+        var check= $('.checkbox').is(':checked');
+        var sum=$('.sum').val();
+        var post_data = {"username":username,"password":password,"password_1":password_1,
+        "postbox":postbox,"tem":tem,"key":key,"question":question,"check":check,"sum":sum};
+        console.log(post_data);
+
+        $.ajax({
+			url:'http://127.0.0.1:8000/v1/login',
+			type:'POST',
+			// 响应的数据格式
+			dataType:'json',
+			// 请求的数据
+			data:JSON.stringify(post_data),
+			// 请求的格式
+			contentType:'application/json',
+			success:function(res){
+				if(res.code == 200){
+					alert('注册成功！');
+					// 本地存储中放token
+					// js代码遵循驼峰命名法，注意大小写问题
+					window.localStorage.setItem('dnblog_token',res.data.token);
+					window.localStorage.setItem('mm_user',res.username);
+					window.location.href = '/change_password'
+
+				}else{
+					alert(res.error);
+
+				}
+			}
+		})
+		}
+	function sendSMS(){
+	    var phone=$('.tem').val();
+	    var post_data = {"phone":phone};
+	    console.log(post_data);
+	    $.ajax({
+			url:'http://127.0.0.1:8000/v1/login/sms',
+			type:'POST',
+			data:JSON.stringify(post_data),
+			contentType:'application/json',
+			dataType:'json',
+			success:function(res){
+				if(res.code == 200){
+					alert('短信验证码已经发送到您的手机，请注意查收');
+				}else{
+					alert(res.error);
+				}
+			}
+		})
+    }
+
+
+
+
+
+</script>
+</html>

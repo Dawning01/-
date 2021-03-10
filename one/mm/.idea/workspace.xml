@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="000f8f6a-a291-41bd-b26f-80b73ca61fb6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1oY4YaSOHOFdtTMbLn5AQUBlNHV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../安装" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../client/static/js" />
+      <recent name="$PROJECT_DIR$/../client/static/images" />
+      <recent name="$PROJECT_DIR$/../client/static/css" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/images" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="000f8f6a-a291-41bd-b26f-80b73ca61fb6" name="Default Changelist" comment="" />
+      <created>1613450242850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613450242850</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1013" y="132" width="649" height="842" key="#views" timestamp="1613812347082">
+      <screen x="69" y="27" width="1851" height="1053" />
+    </state>
+    <state x="1013" y="132" width="649" height="842" key="#views/69.27.1851.1053@69.27.1851.1053" timestamp="1613812347082" />
+    <state x="1180" y="310" key="FileChooserDialogImpl" timestamp="1614927900736">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1180" y="310" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1614927900736" />
+    <state x="374" y="136" key="SettingsEditor" timestamp="1613450319613">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="374" y="136" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1613450319613" />
+    <state x="170" y="133" width="1134" height="832" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613808560221">
+      <screen x="69" y="27" width="1851" height="1053" />
+    </state>
+    <state x="168" y="145" width="1640" height="934" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1173@67.27.1853.1173" timestamp="1613458230082" />
+    <state x="170" y="133" width="1134" height="832" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/69.27.1851.1053@69.27.1851.1053" timestamp="1613808560221" />
+  </component>
+</project>

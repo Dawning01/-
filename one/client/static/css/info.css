@@ -1,0 +1,1466 @@
+/* 
+随内容变化
+width: fit-content;
+
+"居中"
+display: flex;
+   justify-content:center; 
+   align-items:center;
+    $('.InfoDispaly li:last').css('border','0')
+    $('.setItem:eq(0)').css('display','block','background-color', 'aqua')
+
+*/
+body,h1,h2,h3,h4,h5,p,ul,li{
+    padding: 0;
+    margin: 0;
+}
+/* 消除小圆点 */
+ul,li{
+    list-style: none;
+}
+img{
+    display: block;
+    
+}
+a{
+    color:#333;
+    text-decoration:none ;
+    
+
+}
+body{
+    background-color:#e7e7e7 ;
+}
+/* 设置主体 盒子内外边距 */
+.infoMostbox{
+    width: 1200px;
+    margin:0 auto;
+    background-color: #ffffff;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+}
+/* 内容盒子 定义 上 左 右 */
+.infoOrientation{
+    width: 1200px;
+    /* margin:0 auto; */
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    clear: both;
+}
+
+/* top顶部最大盒子 */
+
+.topMostbox{
+    width: 1200px;
+    height: 250px;
+    /* border: 1px solid red; */
+    background-image: url(../images/class2.png);
+    overflow: hidden;
+    background-size:1200px 250px;
+    background-repeat:no-repeat;
+    position: relative;
+    color:  #1f1e1e;
+    /* border-radius: 5px; */
+    
+}
+/*  <!-- 顶部 2个中等 No:1 --> */
+.LefttopMiddle{
+    /* width: 400px;
+    height: 140px;
+     left: ;
+    border: 1px solid red; */
+    width: 425px;
+    height: 140px;
+    display: block;
+    float: left;
+    
+    text-align: left;
+    /* border: 1px solid red;  */
+    border-right: 1px solid #999;
+    margin: 40px 0 0 30px;
+    
+}
+.leftInfoSmallbox{
+    width: 110px;
+    height: 140px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.leftInfoSmallbox img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    /* overflow: hidden; */
+
+}
+
+.HeadModify{
+    margin-top: 5px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+.ModifyIcon{
+    width: 20px;
+    height: 20px;
+    fill:#333;
+    margin: 0 0;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+
+}
+.HeadModify a:hover .ModifyIcon {
+    
+    fill:#999999;
+}
+.HeadModify a:hover{
+   color: #999999; 
+}
+
+
+
+
+
+
+
+
+.rightInfoSmallbox{
+    width: 240px;
+    height: 120px;
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 5px;
+    /* border: 1px solid red; */
+
+    
+}
+.infoList{
+    display: inline-block;
+    width: 240px;
+    height: 120px;
+   
+    
+    
+}
+.infoList li{
+    margin-top: 7px;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+   
+}
+
+
+
+
+
+
+
+/*  <!-- 顶部 2个中等 No:2 --> RighttopInfoMiddle  */
+/* 宣传 分享  论坛  */
+.RighttopInfoMiddle{
+    width: 740px;
+    height: 140px;
+    float: right;
+    display: block;
+    /* border: 1px solid red; */
+    margin: 40px 0 0 0px;
+    font-size: 14px;
+}
+
+.InfoDispaly li{
+    margin: 0;
+    float: left;
+    display: block;
+    width: 180px;
+    height: 140px;
+    /* border:1px solid red; */
+    border-right: 1px solid #999;
+   
+    }
+.InfoDispaly a{
+    text-decoration: none;
+}
+.TopInfoDispaly{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.MiddleInfoDispaly{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.BottomInfoDispaly{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration:none;
+}
+/* 上下两部分大盒子 下 */
+
+.bottomMostbox{
+    width: 1200px;
+    /* border: 1px solid green; */
+    overflow: hidden;
+    clear: both;
+}
+
+/*  下方3部分 顶部盒子*/
+.topInfoMostbox{
+width: 1200px;
+height: 50px;
+border: 1px solid red;
+}
+
+/* left左部最大盒子 */
+.leftInfoMostbox{
+    width: 24%;
+    min-height: 500px;
+    
+    /* border: 1px solid red; */
+    float: left;
+   /* padding: 0 0 0 10px; */
+}
+.directory{
+    /* border: 1px solid red; */
+     padding: 0 0 0 10px;
+     border-bottom: 1px solid #e5e5e5;
+}
+ /* .directoryList li{
+    
+   height: 60px;
+    line-height: 60px;
+    font-family: sans-serif, 微软雅黑;
+    font-size: 21px;
+   
+} */
+.directoryItemH4{
+    height: 60px;
+    line-height: 60px;
+    font-family: sans-serif, 微软雅黑;
+    font-size: 21px;
+    cursor: pointer;
+    padding: 0 0 0 30px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #e5e5e5;
+    position:relative;
+}
+
+.rightArrow{
+display: inline-block;
+width: 20px;
+height: 20px;
+position: relative;
+top: -2px;
+
+left:-6px;
+margin:0px 5px 0 0;
+
+}
+.bottomArrow{
+/* display: inline-block; */
+/* width: 25px;
+height: 25px;
+position: absolute;
+left: 8px;
+top :17px;
+position: none; */
+display: inline-block;
+width: 20px;
+height: 20px;
+/* position: relative; */
+top: 3px;
+/* left:10px; */
+margin:0px 5px 0 0;
+transform: rotate(90deg);
+
+
+}
+
+
+.setItem{
+    display: none;
+}
+.setItem a{
+height: 30px;
+width:190px ;
+display: block;
+text-decoration: none;
+/* line-height: 24px; */
+margin: 0 auto;
+position: relative;
+font-size: 16px;
+margin-bottom: 3px; 
+}
+.setItem a:hover{
+    color: #00aeff;
+}
+.setItemBackground{
+    background-color: aqua;
+}
+.setItem span{
+    /* display: inline-block; */
+    height:24px  ;
+    line-height: 24px;
+    margin: 0 0 0 0;
+    position:absolute;
+    left:25px ;
+    
+}
+.setItem img{
+    width:24px ;
+    height:24px  ;
+    display: inline-block;
+    position:absolute;
+    top: -1px;
+     display: none; 
+}
+.setItem .setItemImg{
+    display: inline-block;
+}
+/* right右部最大盒子 */
+.rightInfoMostbox{
+    /* width: 760px; */
+    width: 75%;
+    min-height: 550px;
+    /* border: 1px solid red; */
+    float: right;
+    
+}
+/* 图像修改 */
+
+
+.selectImg{
+    height: 36px;
+    line-height: 36px;
+    color: #999;
+    font-size: 14px;
+}
+.faceSelect {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: block;
+    line-height: 100px;
+    float: left;
+    margin: 10px 10px 10px 14px;
+    position: relative;
+}
+.faceSelect img{
+    width: 100%;
+    height: 100%;
+}
+/* .personageImg */
+
+/* 修改密码 */
+.concentbox{
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 75px 0 0 0 ;
+}
+.passwordInput{
+    border: 0px;
+}
+.passwordDiv input{
+
+display: inline-block;
+border: 1px solid #e5e5e5;
+border-radius: 7px;
+outline:none;
+width: 300px;
+height: 30px;
+padding: 0 0 0 5px ;
+font-size: 14px;
+}
+.passwordDiv input:hover{
+    border:1px solid #3bb4f2;
+}
+
+.PasswordEmptyDiv{
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    
+}
+.confirmPasswordEmptyDiv{
+    display: inline-block;
+    width: 270px;
+    height: 40px;
+    
+}
+.confirm{
+    display: block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px auto 0px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+
+}
+/* 邮箱验证 */
+
+.emailInput{
+    border: 0px;
+}
+.emailDiv input{
+    
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width: 300px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    }
+.emailDiv input:hover{
+        border:1px solid #3bb4f2;
+    }
+#eamillInput{
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width: 175px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+}
+#eamillInput:hover{
+    border:1px solid #3bb4f2;
+}
+.emailEmptyDiv{
+        display: inline-block;
+        width: 228px;
+        height: 40px;
+    }
+
+.emailValidateEmptyDiv{
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        
+    }
+.emailSave{
+        display: block;
+        width:95px ;
+        height: 40px;
+        background-color: #00aeff;
+        border-radius: 7px;
+        padding: 0;
+        margin: 20px auto 0px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+ 
+}
+.emailSave:hover{
+background-color:aqua;
+color:#000;
+}
+#oldemailaddress{
+    display: inline-block;
+    width: 88px;
+    height: 30px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin-left:20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+#oldemailaddress:hover{
+ background-color:aqua;
+ color:#000;
+ }
+
+.validateMostDiv{
+    display: inline-block;
+    /* border:1px solid red; */
+    position: relative;
+    top:15px;
+    cursor: pointer;
+    
+}
+.validateMostDiv p{
+    display: inline-block;
+    position: relative;
+    top:-15px;
+}
+.validateMostDiv:hover{
+    color:#999;
+}
+/*#canvas{
+     border:1px solid red; 
+}*/
+
+/* 手机号 */
+/* .concentbox{
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 75px 0 0 0 ;
+} */
+/* .formerlyPhoneMostDiv{
+    display: none; 
+}*/
+.formerlyPhone{
+    display: inline-block;
+}
+.phoneEmptyDiv{
+    display: inline-block;
+    width: 245px;
+    height: 40px;
+    
+}
+.phoneSave{
+    display: block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px 0px 0px 275px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+} 
+
+/* 步骤1:原手机验证 */
+#phoneForm{
+    display: none;
+}
+.formerlyPhoneEmptyH3Div{
+        display: inline-block;
+        width: 50px;
+        height: 40px;
+        /* border: 1px solid red; */
+        
+}
+.formerlyPhoneEmptyDiv{
+    display: inline-block;
+    width: 215px;
+    height: 40px;
+}
+.formerlyPhoneEmptyH3{
+    display: inline-block;
+    color: #00aeff;
+}
+.phoneEmptyDiv{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    
+}
+
+.phoneDiv input{
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width:110px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    }
+.phoneDiv input:hover{
+        border:1px solid #3bb4f2;
+    }
+    
+
+.getparmsNote{
+    display:inline-block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px 0px 0px 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position:relative;
+    top:-10px;
+    right:0;
+
+} 
+
+.phoneNoteNext{
+    display: block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px 0px 0px 275px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+
+} 
+/* 步骤2:设置新手机*/
+#newPhoneForm{
+    display: none;
+}
+.newPhoneDiv input{
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width:110px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    }
+.newPhoneDiv input:hover{
+        border:1px solid #3bb4f2;
+    }
+.newFormerlyPhoneEmptyH3Div{
+        display: inline-block;
+        width: 50px;
+        height: 40px;
+        /* border: 1px solid red; */
+        
+}
+.newFormerlyPhoneEmptyH3{
+    display: inline-block;
+    color: #00aeff;
+}
+.newFormerlyPhoneEmptyDiv{
+    display: inline-block;
+    width: 215px;
+    height: 40px;
+}
+.newFormerlyPhoneEmptyH3{
+    display: inline-block;
+    color: #00aeff;
+}
+.phoneEmptyDiv{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    
+}
+
+.newPhoneInput{
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width:240px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    }
+.newPhoneInput:hover{
+        border:1px solid #3bb4f2;
+    }
+    
+.newValidateMostDiv{
+    display: inline-block;
+    /* border:1px solid red; */
+    position: relative;
+    top:15px;
+    cursor: pointer;
+    
+}
+.newValidateMostDiv p{
+    display: inline-block;  
+    position: relative;
+    top:-15px;
+}
+#newcanvas{
+    display: inline-block;
+    /* border:1px solid red; */
+  
+}
+.getparmsNote{
+    display:inline-block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px 0px 0px 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+} 
+
+.phoneNotePutIn{
+    display: block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px 0px 0px 275px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+
+} 
+/* 修改姓名 */
+.accountConcentbox{
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 75px 0 0 0 ;
+}
+.amendCommentText{
+    height: 20px;
+    line-height: 20px;
+    /* border: 1px solid red; */
+    margin: 25px 0 10px 0;
+}
+
+.accountNameEmptyDiv{
+    display: inline-block;
+    width: 250px;
+    height: 40px;  
+}
+.confirmacCountNameEmptyDiv{
+    display: inline-block;
+    width: 230px;
+    height: 40px;
+}
+.accountName b{
+    display: inline-block;
+}
+
+.accountNameDiv input{
+
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width: 250px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    }
+.accountNameDiv input:hover{
+    border:1px solid #3bb4f2;
+}
+.accountNameConfirm{
+    display: block;
+    width:95px ;
+    height: 40px;
+    background-color: #00aeff;
+    border-radius: 7px;
+    padding: 0;
+    margin: 20px auto 0px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+
+}
+/*视频消费记录  */
+.videoConsumeH3 h3{
+margin: 10px 0 0px 0;
+}
+.text-lc-333{
+    margin: 10px 0;
+}
+.text-lc-333 span{
+    font-size: 16px;
+}
+.text-lmt-5{
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.c-danger{
+    color: red;
+}
+.blackAddmoney{
+    display: block;
+   
+    border: 1px solid  #00aeff;
+    padding: 2px 3px;
+    border-radius: 4px;
+    color: #00aeff;
+    position: absolute;
+    top: -5px;
+    right: 20px;
+}
+.blackAddmoney:hover{
+    background-color:  #3bb4f2;
+    color: #fff;
+    /* text-transform: none; */
+    text-decoration:none ;
+}
+.linemt-20{
+    font-size: 0;
+    line-height: 0;
+    border-top: solid 1px #eee;
+    float: none;
+    margin: 0 0 10px 0;
+}
+
+/* V币充值 */
+.VBiconcentbox{
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+}
+.VBiFirst{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #00aeff;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+.VBiVerify{
+    display: inline-block;
+    color: #333333;
+}
+#VBiuserVerifyInput{
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    outline:none;
+    width: 150px;
+    height: 30px;
+    padding: 0 0 0 5px ;
+    font-size: 14px;
+    margin: 5px 0 0 35px;
+    font:  14px;
+    color: #333333;
+}
+#VBiuserVerifyInput:hover{
+    border: 1px solid #00aeff;
+}
+.c-primary{
+    color: #00aeff;
+    cursor: pointer;
+}
+.VBiTwoDiv{
+    margin: 50px 0 0 0;
+}
+.VBiAddList{
+    width: 100%;
+    padding: 0 0 0 35px;
+    /* border: 1px solid red; */
+    margin: 0px 0 0 0;
+     text-align:content;
+
+}
+.VBiAddList li{
+    display:inline-block;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    margin: 0 35px 0 0;
+    line-height: 40px;
+    cursor: pointer;
+}
+.VBiAddList li:hover{
+    border: 1px solid #f37b1d;;
+}
+/* 选中状态 */
+.VBipaymentFashion.Hook,.VBiAdd.Hook{
+    background: url(../images/Hook.png) no-repeat -1px -1px;
+    border: 1px solid #ff7800;
+}
+.VBiAddDivGoTo{
+    width:fit-content;
+    margin:  0 0 0 15px;
+    position: relative;
+}
+.VBiAdd50{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -6px;
+    top: -5px;
+}
+.VBiAdd100{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -6px;
+    top: -5px;
+}
+.VBiAdd b{
+    display:inline-block;
+    font-size: 16px;
+
+}
+.VBiAdd span{
+    display:inline-block;
+    color: #666666;
+}
+.VBithreeDiv{
+    margin: 50px 0 0 0;
+}
+/* 支付方式 */
+.paymentFashion{
+    padding: 0 0 0 42px;
+}
+.paymentFashionDivList{
+    padding: 0 0 0 40px;
+}
+.VBipaymentFashion{
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    padding: 0 10px;
+    line-height: 40px;
+
+    /* display: inline-block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #d0d0d0;
+    padding: 0px 20px;
+    text-decoration: none;
+    position: relative;
+    color: #666;
+    cursor: pointer; */
+
+    
+   
+}
+.VBipaymentFashion:hover{
+
+
+border: 1px solid #f37b1d;
+
+} 
+.jumpPayment{
+    display: block;
+    margin: 0px 0px;
+    width: 100px;
+    height: 40px;
+  
+    border: 0px;
+    border: 1px solid  #ff7800;
+    background-color: #ffffff;
+    transition: all 0.6s;
+    color:#ff7800;
+   
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+   
+    cursor: pointer;
+    margin: 40px auto 0;
+
+}
+.jumpPayment:hover{
+    background-color: #ff7800;
+    color: #fff;
+}
+
+.orderFormMostDiv{
+    z-index:80;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    margin:-350px 350px;
+    background-color: #f3f2f2;
+    
+    border: 1px solid #e5e5e5;  
+    border-radius: 5px;
+    /* padding: 40px 0 0 0; */
+    display: none;
+   
+}
+.orderFormMostDiv h3{
+    display:inline-block;
+}
+.cancelPayment{
+    display:inline-block;
+    /* float: right; */
+    position: relative;
+    width: 15px;
+    height: 15px;
+    top: -10px;
+    right: -60px;
+    cursor: pointer;
+}
+.orderFormMostDiv li{
+   /* text-align: center; */
+   border-bottom: 1px solid #e5e5e5;
+   height: 50px;
+   line-height: 50px;
+   /* margin-bottom: 15px; */
+}
+.orderFormMostDiv b{
+    display: inline-block;
+
+}
+.orderFormMostDiv p{
+    display: inline-block;
+    color:  #ff7800;
+}
+.blackPayment{
+    display: block;
+    width: 90px;
+    height: 30px;
+    margin: 0 auto;
+    background-color:  #ff7800;
+    border-radius: 2px;
+    outline: none;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.blackPayment:hover{
+background-color:  #ffd900ee;
+}
+/* 宣傳 */
+.flackOriginConcentbox{
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 50px 0 0 0 ;
+}
+
+/* 学习文本 */
+.learningText{
+    height: 20px;
+    line-height: 20px;
+    /* border: 1px solid red; */
+    margin: 20px 0 10px 0;
+}
+/* 学习进度列表 */
+.learningProgressUl{
+width: 100%;
+
+}
+.learningProgressLi{
+    /* width: 100px;
+    height:50px; */
+    display: inline-block;
+    margin: 10px 0  0 25px ;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+/* 学习进度盒子开始 */
+.learningProgressBox{
+    width: 370px;
+    height:150px;
+    position: relative;
+}
+.learningLeftBox{
+    display:inline-block;
+}
+.learningLeftBox a{
+    display:inline-block;
+    margin: 10px;
+    width: 150px;
+    height:120px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.learningLeftBox img{
+    display: block;
+    width: 100%;
+    height:100%;
+}
+.progressRightChaDiv{
+    width:20px ;
+    height:20px ;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    overflow: hidden;
+}
+.progressRightChaDiv img{
+width:100% ;
+height:100% ;
+}
+.progressRightChaDiv:hover{
+    cursor: pointer;
+
+}
+.learningRightBox{
+    display:inline-block;
+    position: absolute;
+    top: 20px;
+    /* border: 1px solid red; */
+}
+/* .progressRightUl li{
+    width: 175px;
+
+} */
+.progressRightUlA:hover{
+    text-decoration:  underline; 
+    transition:all 0.8s;
+    color: aqua;
+    background-color: aqua;
+}
+/* .progressRightBottom{
+    margin:10px 0 0 0 ; 
+} */
+.learningRightBox li{
+    margin: 0 0 10px 0;
+}
+/* 学习进度盒子结束 */
+
+
+/*  我关注的课程 共 progressRightUl 开始*/
+.buyCourse{
+    width: auto;
+    /* display: inline-block; */
+    float: right;
+    border: 1px solid #f37b1d;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    padding: 2px 5px;
+    display: none;
+
+}
+.buyCourse:hover{
+    border: 1px solid rgba(250, 225, 4, 0.993);
+    background-color: rgba(250, 225, 4, 0.993);
+}
+/* buyCourse 加入 buyCourseDispaly 才显示购买 */
+.buyCourse.buyCourseDispaly{
+    display:block;
+}
+.enterIntoCourse{
+    width: auto;
+    float: right;
+    /* display: inline-block; */
+    border-radius: 5px;
+    border: 1px solid #00aeff;
+    padding: 2px 5px;
+}
+.enterIntoCourse:hover{
+    border: 1px solid aqua;
+    background-color:aqua;
+}
+/*我关注的课程 结束  */
+
+
+/*课程笔记开始   */
+
+/* 没有课程笔记开始 */
+.classNoNoteModeBox{
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+    padding: 175px 0 0 0;
+   
+    /* line-height: 350px; */
+    text-align: center;
+
+}
+.classNoNotetextDiv{
+   
+    /* border: 1px solid red; */
+    margin: 0 0 0 0 ;
+   
+}
+.classNoNotetextDiv p{
+    color: #999999;
+    margin: 8px;
+   
+    /* align-items:center;  */
+}
+.classNoNotetextDiv img{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top:-1px;
+    
+}
+
+
+/*  没有课程笔记结束*/
+
+/* 有课程笔记开始 */
+.classListText{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin: 5px 0 10px 0;
+}
+.classListTextP{
+    display: inline-block;
+color:#00aeff ;
+font-size: 16px;
+
+}
+.classListTextHref{
+    display: inline-block;
+    color:#00aeff ;
+    font-size: 16px;
+    text-decoration:none ;
+}
+.classListTextHref:hover{
+    display: inline-block;
+    color:#0f5c80 ;
+    font-size: 16px;
+    text-decoration:none ;
+}
+
+.classNoteParagraph a{
+    color:#00aeff ;
+}
+.classNoteParagraph{
+    margin: 10px 0 0 0;
+}
+.lookNote{
+    position: absolute;
+    color:#00aeff ;
+    bottom: 25px;
+    right: 15px;
+}
+.blackClassList{
+    display: inline-block;
+    padding: 2px 5px;
+    /* border: 1px solid red ; */
+    position: absolute;
+    font-size: 12px;
+    right: 10px;
+    top: -10px;
+    border-radius: 2px;
+    color: #fff;
+    background-color:#00aeff;
+
+
+}
+/* 有课程笔记结束*/
+
+/* 查看 课程笔记开始*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* border:1px solid red ; */
+    border-top: 1px solid #ddd;
+
+}
+   
+
+
+/* .text-trDiv{
+    border:1px solid red ;
+} */
+
+.text-c{
+    font-size: 12px;
+    text-align: center;
+    /* background-color: #f37b1d; */
+}
+
+.text-none{
+display: none;
+}
+.text-block{
+display:block;
+text-decoration:none;
+color:#3899dd ;
+
+}
+/* td{
+    background-color: #f9f9f9;
+       background-color: #f37b1d; 
+} */
+.table-border th,.table-border td {
+    border-bottom: 1px solid #ddd;
+}
+/* 查看 课程笔记结束 */
+
+/*课程笔记结束   */
+
+
+
+
+/* 我的评论 */
+
+/* 我的评论 开始 */
+.commentText{
+    height: 20px;
+    line-height: 20px;
+    /* border: 1px solid red; */
+    margin: 15px 0 10px 0;
+}
+.pages {
+    width: 100%;
+    position: absolute;
+    height: 60px;
+    left: 0px;
+    bottom: 10px;
+    text-align: center;
+}
+.layui-laypage a, .layui-laypage span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+}
+
+/* .layui-laypage-count{
+
+} */
+.layui-laypage button {
+    margin-left: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.layui-laypage input {
+    display: inline-block;
+    width: 40px;
+    margin: 0 10px;
+    padding: 0 3px;
+    text-align: center;
+}
+.layui-input{
+    border: 0px;
+    border: 1px solid #e2e2e2;
+    outline:none;
+
+}
+.layui-laypage button, .layui-laypage input {
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    vertical-align: top;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.layui-laypage a, .layui-laypage button, .layui-laypage select  ,.layui-laypage-btn{
+    border: 1px solid #e2e2e2;
+}
+#pages{
+    font: 1em sans-serif;
+}
+/* 我的评论 结束*/
+
+.clean{
+    clear:both;
+    display:block;
+    visibility:hidden;
+    height:0;
+    line-height:0;
+    content:"";
+}
+
+
+
+
+/* 尾部开始 */
+footer{
+    width: 100%;
+    min-width:1200px ;
+    background-color:#d8d6d6;
+    /* border: 1px solid red; */
+
+}
+.content-box{
+    width: 1200px;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    /* display: flex;
+     justify-content: center;
+    align-items:center; */
+    /* background-color:#e5e5e5; */
+}
+.pl-200{
+    margin: 0 auto 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.Navbar{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;;
+    /* border: 1px solid red; */
+}
+
+.Navbar a{
+    display: inline-block;
+    min-width: 70px;
+    width: auto;
+    border-radius: 4px;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+    background-color: #3899dd;
+    color: #fff;
+    margin: 0px 5px;
+    padding: 2px 5px;
+    letter-spacing: 1px;
+}
+.Navbar a:hover{
+    background-color: #1880ca;
+}
+.copyright{
+/* border: 1px solid red; */
+margin: 0 auto;
+display: flex;
+justify-content:center; 
+align-items:center;
+color: #000;
+}
+.copyright a:hover{
+
+ text-decoration:underline;
+ color: #999999;
+ 
+ 
+}
+.copyright img{
+    display: inline-block;
+    margin: 10px;
+}
+/* 尾部结束 */
+
+

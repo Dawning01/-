@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <script src="../static/js/jquery.min.js"></script>
+    <link href="../static/css/info.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/abcd.js"></script>
+
+</head>
+<body>
+</body>
+
+<script>
+    token = window.localStorage.getItem('mm_token');
+    username = window.localStorage.getItem('mm_user');
+    var html_body = '' ;
+    $.ajax({
+        type:"get",
+        url:"http://127.0.0.1:8000/v1/change/" + username,
+        beforeSend: function(request) {
+           request.setRequestHeader("Authorization", token);
+       },
+       success:function(result){
+       if(result.code ==200){
+            console.log(result);
+            html_body+='<div class="infoMostbox">';
+            html_body+='<div class="infoOrientation">';
+            html_body+= '<div class="topMostbox">';
+            html_body+='<div class="LefttopMiddle">';
+            html_body+='<div class="leftInfoSmallbox">';
+            html_body+='<img src="">';
+            html_body+='<div  class="HeadModify" >';
+            html_body+='<a href="https://www.51zxw.net/login/UserCenter/AvatarSet" style="text-decoration: none;">';
+            html_body+= '<i class="Hui-iconfont Hui-iconfont-feedback2 f-16 va-t"></i>';
+            html_body+='<span class="ModifyVa-t">';
+            html_body+='<svg t="1611922028853" class="ModifyIcon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2116" ><path d="M512 235.52H263.0656A27.648 27.648 0 0 0 235.52 263.168v497.664a27.648 27.648 0 0 0 27.648 27.648h497.664a27.648 27.648 0 0 0 27.648-27.648v-228.096a34.56 34.56 0 1 1 69.12 0v228.096a96.768 96.768 0 0 1-96.768 96.768H263.0656a96.768 96.768 0 0 1-96.768-96.768V263.168a96.768 96.768 0 0 1 96.768-96.768H512a34.56 34.56 0 1 1 0 69.12z m213.504 14.336L470.016 505.2416 445.44 578.56l73.472-24.6272 255.4368-255.4368-48.896-48.8448z m24.4736-73.3184l97.7408 97.7408a34.56 34.56 0 0 1 0 48.8448l-285.5936 285.5936a34.5088 34.5088 0 0 1-13.4656 8.3456l-147.0464 49.3056a34.56 34.56 0 0 1-43.7248-43.776l49.152-147.0464a34.304 34.304 0 0 1 8.3456-13.4144l285.5936-285.5936a34.56 34.56 0 0 1 48.896 0z"  p-id="2117"></path></svg>修改头像</span>';
+            html_body+='</a>';
+            html_body+= '</div>';
+            html_body+='</div>';
+            html_body+='<div class="rightInfoSmallbox">';
+            html_body+='<ul class="infoList">';
+            html_body+='<li><b>' + result.data.nickname + '</b></li>';
+            html_body+= '<li>会员类型：' + result.data.vip +'</li>';
+            html_body+='<li>您是第 21155992 位会员</li>';
+            html_body+= '<li>注册于：' + result.data.created_time + '</li>';
+            html_body+='</ul>';
+            html_body+='</div>';
+            html_body+='</div>';
+            html_body+='<div class="RighttopInfoMiddle">';
+            html_body+='<ul class="InfoDispaly">';
+            html_body+='<li><a href="">';
+            html_body+='<div class="TopInfoDispaly"><b>我的宣传</b></div>';
+            html_body+='<div class="MiddleInfoDispaly">有效来路：0 次</div>';
+            html_body+='<div class="BottomInfoDispaly">可用积分：0 分</div>';
+            html_body+='</a></li>';
+            html_body+='<li><a href="">';
+            html_body+='<div class="TopInfoDispaly"><b>我的财务</b></div>';
+            html_body+= '<div class="MiddleInfoDispaly">已消费V币：0 个</div>';
+            html_body+='<div class="BottomInfoDispaly">现有V币：0 个</div>';
+            html_body+='</a></li>';
+            html_body+='<li>';
+            html_body+='<div class="TopInfoDispaly"><b>我的分享</b></div>';
+            html_body+= '<div class="MiddleInfoDispaly"><a href="/newan/ExpertCenter/MyVideo" target="_blank">我发布的视频教程</a></div>';
+            html_body+= '<div class="BottomInfoDispaly"><a href="/newan/ExpertCenter/MyIncome" target="_blank">我获取的收益</a></div>';
+            html_body+='</li>';
+            html_body+='<li><a href="">';
+            html_body+= '<div class="TopInfoDispaly"><b>我的论坛</b></div>';
+            html_body+='<div class="MiddleInfoDispaly">总帖子：0</div>';
+            html_body+='<div class="BottomInfoDispaly">自学币：0 分</div>';
+            html_body+= '<div class="BottomInfoDispaly">金钱：0</div>';
+            html_body+= '</a></li>';
+            html_body+= '</ul>';
+            html_body+='<div style="clear: both;"></div>';
+            html_body+='</div>';
+            html_body+='</div>';
+            html_body+='<div class="bottomMostbox">';
+            html_body+='<div class="topInfoMostbox"></div>';
+            html_body+='<div class="leftInfoMostbox">';
+            html_body+='<div class="directory"><h2>目录</h2></div>';
+            html_body+='<div class="directoryBox">';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow " src="../../static/img/right.png" >账号管理</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href="text:javaScript"><img class="setItemImg" src="../../static/img/location.png" alt=""><span>头像设置</span></a>         ';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>修改密码</span></a>';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>邮箱绑定</span></a>';
+            html_body+=' <a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>手机绑定</span></a>';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>账号绑定</span></a>';
+            html_body+='<a href=""><img src="../../static/img/location.png" alt=""><span>修改用户名</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow " src="../../static/img/right.png" >财务中心</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href=""><img class="setItemImg" src="../../static/img/location.png" alt=""><span>头像设置</span></a>';
+            html_body+='<a href=""><img src="../../static/img/location.png" alt=""><span>视频消费记录</span></a>';
+            html_body+='<a href=""><img src="../../static/img/location.png" alt=""><span>问答消费记录</span></a>';
+            html_body+='<a href=""><img src="../../static/img/location.png" alt=""><span>APP离线消费</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow" src="../../static/img/right.png" >V币充值</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href=""><img class="setItemImg" src="../../static/img/location.png" alt=""><span>V币充值</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow " src="../../static/img/right.png" >宣传管理</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href="text:javaScript"><img class="setItemImg" src="../../static/img/location.png" alt=""><span>活动介绍</span></a> ';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>宣传方法</span></a>';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>宣传来路</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow " src="../../static/img/right.png" >进度与管理</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href="text:javaScript"><img class="setItemImg" src="../../static/img/location.png" alt=""><span>我的学习进度</span></a>';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>我关注的课程</span></a>';
+            html_body+='<a href="text/javaScript"><img src="../../static/img/location.png" alt=""><span>课堂笔记</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='<li class="directoryItem"><h4 class="directoryItemH4"><img class="rightArrow " src="../../static/img/right.png" >我的评论</h4>';
+            html_body+='<div class="setItem">';
+            html_body+='<a href="text:javaScript"><img class="setItemImg" src="../../static/img/location.png" alt=""><span>我的评论列表</span></a>';
+            html_body+='</div>';
+            html_body+='</li>';
+            html_body+='</ul>';
+            html_body+='</div>';
+            html_body+='</div>';
+            html_body+='<div class="rightInfoMostbox"></div>';
+            html_body+='</div>';
+            html_body+='<div class="clean"></div>';
+            html_body+='</div>';
+            html_body+='</div>';
+            html_body+='<div class="clean"></div>';
+            html_body+='</div>';
+            html_body+='</div>';
+            $('body').html(html_body);
+            }else{
+                alert(result.error)
+       }
+}
+    })
+
+</script>
+
+</html>
